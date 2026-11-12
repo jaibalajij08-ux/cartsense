@@ -7,9 +7,20 @@ Dataset: Online Shoppers Purchasing Intention (UCI Machine Learning Repository)
 """
 
 import io
+import os
+import sys
 import streamlit as st
 import pandas as pd
 import numpy as np
+
+# Ensure root project directory and src directory are on Python's module search path
+CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
+if CURRENT_DIR not in sys.path:
+    sys.path.insert(0, CURRENT_DIR)
+
+SRC_DIR = os.path.join(CURRENT_DIR, "src")
+if os.path.exists(SRC_DIR) and SRC_DIR not in sys.path:
+    sys.path.insert(0, SRC_DIR)
 
 # Page configuration
 st.set_page_config(
@@ -19,30 +30,57 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# Internal module imports
-from src.style import (
-    apply_custom_css,
-    render_top_navbar,
-    render_hero_header,
-    render_kpi_card,
-    render_prediction_banner,
-    render_action_tile,
-    render_footer
-)
-from src.data_loader import (
-    load_dataset,
-    get_overview_metrics,
-    get_monthly_analysis,
-    get_visitor_analysis,
-    get_weekend_analysis,
-    get_traffic_analysis
-)
-from src.ml_pipeline import (
-    load_all_models_and_artifacts,
-    predict_session,
-    predict_batch,
-    recompute_metrics_at_threshold
-)
+# Robust module imports (supports both packaged `src.` and flat structure)
+try:
+    from src.style import (
+        apply_custom_css,
+        render_top_navbar,
+        render_hero_header,
+        render_kpi_card,
+        render_prediction_banner,
+        render_action_tile,
+        render_footer
+    )
+    from src.data_loader import (
+        load_dataset,
+        get_overview_metrics,
+        get_monthly_analysis,
+        get_visitor_analysis,
+        get_weekend_analysis,
+        get_traffic_analysis
+    )
+    from src.ml_pipeline import (
+        load_all_models_and_artifacts,
+        predict_session,
+        predict_batch,
+        recompute_metrics_at_threshold
+    )
+    import src.visualizations as viz
+except (ModuleNotFoundError, ImportError):
+    from style import (
+        apply_custom_css,
+        render_top_navbar,
+        render_hero_header,
+        render_kpi_card,
+        render_prediction_banner,
+        render_action_tile,
+        render_footer
+    )
+    from data_loader import (
+        load_dataset,
+        get_overview_metrics,
+        get_monthly_analysis,
+        get_visitor_analysis,
+        get_weekend_analysis,
+        get_traffic_analysis
+    )
+    from ml_pipeline import (
+        load_all_models_and_artifacts,
+        predict_session,
+        predict_batch,
+        recompute_metrics_at_threshold
+    )
+    import visualizations as viz
 import src.visualizations as viz
 
 # Inject custom modern vibrant theme styling
