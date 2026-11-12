@@ -1,0 +1,171 @@
+{
+    "detailed_top_20": [
+        {
+            "feature": "PageValues",
+            "importance": 0.47918791682851114
+        },
+        {
+            "feature": "ExitRates",
+            "importance": 0.08585209705481514
+        },
+        {
+            "feature": "ProductRelated_Duration",
+            "importance": 0.07797065699409061
+        },
+        {
+            "feature": "BounceRates",
+            "importance": 0.055909481171179366
+        },
+        {
+            "feature": "ProductRelated",
+            "importance": 0.05048741558188411
+        },
+        {
+            "feature": "Administrative",
+            "importance": 0.0360263888133682
+        },
+        {
+            "feature": "Month_Nov",
+            "importance": 0.0297459012590952
+        },
+        {
+            "feature": "Administrative_Duration",
+            "importance": 0.028878145109325303
+        },
+        {
+            "feature": "VisitorType_Returning_Visitor",
+            "importance": 0.011873908967469251
+        },
+        {
+            "feature": "Informational",
+            "importance": 0.011571350820904472
+        },
+        {
+            "feature": "VisitorType_New_Visitor",
+            "importance": 0.01077291506756991
+        },
+        {
+            "feature": "Month_May",
+            "importance": 0.010253865313948153
+        },
+        {
+            "feature": "TrafficType_2",
+            "importance": 0.009884911100196243
+        },
+        {
+            "feature": "Informational_Duration",
+            "importance": 0.009738151979948874
+        },
+        {
+            "feature": "SpecialDay",
+            "importance": 0.00727537757994384
+        },
+        {
+            "feature": "TrafficType_3",
+            "importance": 0.006295827012062288
+        },
+        {
+            "feature": "Month_Mar",
+            "importance": 0.006235428808976666
+        },
+        {
+            "feature": "Month_Sep",
+            "importance": 0.004515083410248246
+        },
+        {
+            "feature": "Month_Oct",
+            "importance": 0.004498156260162224
+        },
+        {
+            "feature": "OperatingSystems_3",
+            "importance": 0.004486509809074603
+        }
+    ],
+    "aggregated": [
+        {
+            "feature": "PageValues",
+            "importance": 0.4792,
+            "percentage": 47.92
+        },
+        {
+            "feature": "ExitRates",
+            "importance": 0.0859,
+            "percentage": 8.59
+        },
+        {
+            "feature": "ProductRelated_Duration",
+            "importance": 0.078,
+            "percentage": 7.8
+        },
+        {
+            "feature": "Month",
+            "importance": 0.0636,
+            "percentage": 6.36
+        },
+        {
+            "feature": "BounceRates",
+            "importance": 0.0559,
+            "percentage": 5.59
+        },
+        {
+            "feature": "ProductRelated",
+            "importance": 0.0505,
+            "percentage": 5.05
+        },
+        {
+            "feature": "Administrative",
+            "importance": 0.036,
+            "percentage": 3.6
+        },
+        {
+            "feature": "TrafficType",
+            "importance": 0.0328,
+            "percentage": 3.28
+        },
+        {
+            "feature": "Administrative_Duration",
+            "importance": 0.0289,
+            "percentage": 2.89
+        },
+        {
+            "feature": "VisitorType",
+            "importance": 0.0228,
+            "percentage": 2.28
+        },
+        {
+            "feature": "Region",
+            "importance": 0.0123,
+            "percentage": 1.23
+        },
+        {
+            "feature": "Informational",
+            "importance": 0.0116,
+            "percentage": 1.16
+        },
+        {
+            "feature": "OperatingSystems",
+            "importance": 0.0113,
+            "percentage": 1.13
+        },
+        {
+            "feature": "Informational_Duration",
+            "importance": 0.0097,
+            "percentage": 0.97
+        },
+        {
+            "feature": "Browser",
+            "importance": 0.0083,
+            "percentage": 0.83
+        },
+        {
+            "feature": "SpecialDay",
+            "importance": 0.0073,
+            "percentage": 0.73
+        },
+        {
+            "feature": "Weekend",
+            "importance": 0.006,
+            "percentage": 0.6
+        }
+    ]
+}

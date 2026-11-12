@@ -1,0 +1,125 @@
+{
+    "best_model": "Random Forest",
+    "numerical_cols": [
+        "Administrative",
+        "Administrative_Duration",
+        "Informational",
+        "Informational_Duration",
+        "ProductRelated",
+        "ProductRelated_Duration",
+        "BounceRates",
+        "ExitRates",
+        "PageValues",
+        "SpecialDay"
+    ],
+    "categorical_cols": [
+        "Month",
+        "OperatingSystems",
+        "Browser",
+        "Region",
+        "TrafficType",
+        "VisitorType",
+        "Weekend"
+    ],
+    "target_col": "Revenue",
+    "unique_values": {
+        "Month": [
+            "Aug",
+            "Dec",
+            "Feb",
+            "Jul",
+            "June",
+            "Mar",
+            "May",
+            "Nov",
+            "Oct",
+            "Sep"
+        ],
+        "OperatingSystems": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"
+        ],
+        "Browser": [
+            "1",
+            "10",
+            "11",
+            "12",
+            "13",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"
+        ],
+        "Region": [
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"
+        ],
+        "TrafficType": [
+            "1",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "2",
+            "20",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9"
+        ],
+        "VisitorType": [
+            "New_Visitor",
+            "Other",
+            "Returning_Visitor"
+        ],
+        "Weekend": [
+            "False",
+            "True"
+        ]
+    },
+    "feature_defaults": {
+        "Administrative": 1,
+        "Administrative_Duration": 20.0,
+        "Informational": 0,
+        "Informational_Duration": 0.0,
+        "ProductRelated": 18,
+        "ProductRelated_Duration": 600.0,
+        "BounceRates": 0.01,
+        "ExitRates": 0.03,
+        "PageValues": 15.0,
+        "SpecialDay": 0.0,
+        "Month": "Nov",
+        "OperatingSystems": "2",
+        "Browser": "2",
+        "Region": "1",
+        "TrafficType": "2",
+        "VisitorType": "Returning_Visitor",
+        "Weekend": "False"
+    }
+}
