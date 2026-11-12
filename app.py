@@ -81,7 +81,6 @@ except (ModuleNotFoundError, ImportError):
         recompute_metrics_at_threshold
     )
     import visualizations as viz
-import src.visualizations as viz
 
 # Inject custom modern vibrant theme styling
 apply_custom_css()

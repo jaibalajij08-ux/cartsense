@@ -15,9 +15,22 @@ import numpy as np
 from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, confusion_matrix
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-if not os.path.exists(os.path.join(BASE_DIR, 'models')):
-    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-MODELS_DIR = os.path.join(BASE_DIR, 'models')
+
+def get_models_dir() -> str:
+    """Resolve models directory across various deployment directory layouts."""
+    candidates = [
+        os.path.join(BASE_DIR, 'models'),
+        os.path.join(os.path.dirname(os.path.abspath(__file__)), 'models'),
+        os.path.join(os.path.dirname(os.path.abspath(__file__))),
+        os.path.join(os.getcwd(), 'models'),
+        os.path.join(os.getcwd()),
+    ]
+    for p in candidates:
+        if os.path.exists(os.path.join(p, 'best_model.joblib')):
+            return p
+    return candidates[0]
+
+MODELS_DIR = get_models_dir()
 
 
 def ensure_models_trained():

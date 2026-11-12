@@ -11,9 +11,22 @@ import pandas as pd
 import numpy as np
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-if not os.path.exists(os.path.join(BASE_DIR, 'data')):
-    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-DATASET_PATH = os.path.join(BASE_DIR, 'data', 'online_shoppers_intention.csv')
+
+def get_dataset_path() -> str:
+    """Resolve dataset path across various deployment directory layouts."""
+    candidates = [
+        os.path.join(BASE_DIR, 'data', 'online_shoppers_intention.csv'),
+        os.path.join(os.path.dirname(os.path.abspath(__file__)), 'data', 'online_shoppers_intention.csv'),
+        os.path.join(os.path.dirname(os.path.abspath(__file__)), 'online_shoppers_intention.csv'),
+        os.path.join(os.getcwd(), 'data', 'online_shoppers_intention.csv'),
+        os.path.join(os.getcwd(), 'online_shoppers_intention.csv'),
+    ]
+    for p in candidates:
+        if os.path.exists(p):
+            return p
+    return candidates[0]
+
+DATASET_PATH = get_dataset_path()
 
 
 @st.cache_data(show_spinner=False)
